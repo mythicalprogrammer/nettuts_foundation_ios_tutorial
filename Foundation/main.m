@@ -13,9 +13,10 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        NSObject *myFirstObject = [[NSObject alloc] init];
+        NSLog(@"Class > %@", [myFirstObject class]);
+        NSLog(@"Superclass > %@", [myFirstObject superclass]);
+        NSLog(@"Conforms to Protocol > %i", [myFirstObject conformsToProtocol:@protocol(NSObject)]);
     }
     return 0;
 }
